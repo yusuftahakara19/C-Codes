@@ -27,7 +27,7 @@ int brute_force_maxGain(int arr[], int n)
         }
     }
     printf ("\n ************************ Brute Force ************************");
-    printf("\n\n Kazilmasi gereken kesintisiz blok butunu: %d-%d",left,right);
+    printf("\n\n Uninterrupted block whole that needs to be excavated: %d-%d",left,right);
     return maxSum;
 }
 
@@ -96,13 +96,13 @@ int maximum_sum(int nums[], int low, int high,int number_Of_array)
        	//Depending on which of the LSS RSS AND CSS is larger, the place to dig will change, so it will be determined which one is bigger.
        	
        	if (maximum_sum(nums, low, mid,number_Of_array) >= maximum_sum(nums, mid + 1, high,number_Of_array) && maximum_sum(nums, low, mid,number_Of_array) >= cross_sum_subarray)
-       			 printf("\n\n Kazilmasi gereken kesintisiz blok butunu: %d-%d",left,mid);
+       			 printf("\n\n Uninterrupted block whole that needs to be excavated : %d-%d",left,mid);
 		   
         else if (maximum_sum(nums, mid + 1, high,number_Of_array) >= maximum_sum(nums, low, mid,number_Of_array) && maximum_sum(nums, mid + 1, high,number_Of_array) >= cross_sum_subarray)
-         		   	 printf("\n\n Kazilmasi gereken kesintisiz blok butunu: %d-%d",mid+1,right);
+         		   	 printf("\n\n Uninterrupted block whole that needs to be excavated : %d-%d",mid+1,right);
 
         else if (cross_sum_subarray >= maximum_sum(nums, low, mid,number_Of_array) && cross_sum_subarray >= maximum_sum(nums, mid + 1, high,number_Of_array))
-      		   	 printf("\n\n Kazilmasi gereken kesintisiz blok butunu: %d-%d",left,right);
+      		   	 printf("\n\n Uninterrupted block whole that needs to be excavated : %d-%d",left,right);
 
       
 	   }
@@ -126,8 +126,8 @@ int main()
   
   
     printf("\n  ");
-    printf("\n En yuksek kazanc: %d",brute_force_maxGain(arr, n));
-    printf("\n En yuksek kazanc: %d",maximum_sum(arr,0, n-1,n-1));
+    printf("\n Highest earnings: %d",brute_force_maxGain(arr, n));
+    printf("\n Highest earnings: %d",maximum_sum(arr,0, n-1,n-1));
     return 0;
 }
 
