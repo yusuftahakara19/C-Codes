@@ -1,12 +1,11 @@
  <hr>
 <h2> PROBLEM </h2>
 On an NxN game board, N colors are placed in different order on each line. The order of the colors in a row can be changed by moving the colors circularly to the right. For example, if the colors in the row are red, blue, green, and purple, the new order will be purple, red, blue, green when the row is moved to the right 1 time. If it is shifted to the right one more time, green, purple, red, blue are obtained. In the last case, design the algorithm that recursively organizes the game board with the backtracking method so that there is only 1 of each color in each column.
-<hr>
 
- <hr>
 <h2> SOLUTION </h2>
 <em><strong>Colors</strong></em> <br>
 I created a struct to give each color an index. Since the N value given to us in the question is maximum 8, I created a dynamic array with 8 colors and placed the colors as their indexes and rows in the array.
+
 <em><strong>One of each color in each column</strong></em> <br>
 I used the backtracking method for this. When using this method, if there is a repeating color in a column, I did a circular right shift and checked the new status. If the colors in a row cannot be shifted so that they are not the same color in the same column, I recursively use the backtracking method to shift the colors in the next row. After doing this for all rows, if there is no repeating color in a column, I terminate the function.
 <hr>
