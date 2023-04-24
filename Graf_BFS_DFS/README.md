@@ -22,5 +22,10 @@ We will select the starting node and start scanning that node. We will check if 
 
 
 
+![2](https://user-images.githubusercontent.com/119736588/233901770-e72d60ba-20c4-4915-b8b4-5a218a20ef76.PNG)
+
+
+
+
 
 
